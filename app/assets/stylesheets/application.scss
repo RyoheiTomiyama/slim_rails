@@ -13,3 +13,52 @@
  *= require_tree .
  *= require_self
  */
+
+$error: #f43333;
+$primary: #3333f4;
+
+html, body {
+	margin: 0;
+	padding: 0;
+}
+* {
+	box-sizing: border-box;
+}
+.clearfix:after {
+	content: "";
+	clear: both;
+	display: block;
+}
+header {
+	width: 100%;
+	padding: 10px 0;
+	text-align: center;
+	background-color: #ccc;
+}
+#container {
+	background-color: #f2f2f2;
+	padding: 30px 0;
+}
+
+.alert {
+	color: $error;
+}
+
+.pull-right {
+	float: right;
+}
+
+//===== 　Button  =====//
+.c-btn {
+	display: inline-block;
+	padding: 0.4em 1em;
+}
+.btn-primary {
+	background-color: $primary;
+}
+
+.btn-ghost {
+	border: 1px solid #aaa;
+	border-radius: 3px;
+}
+//===== 　End Button  =====//

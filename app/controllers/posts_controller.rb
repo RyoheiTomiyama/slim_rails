@@ -1,4 +1,5 @@
 class PostsController < ApplicationController
+  before_action :authenticate_user!, only: [ :index ]
   before_action :set_post, only: [:show, :edit, :update, :destroy]
 
   # GET /posts
@@ -6,6 +7,7 @@ class PostsController < ApplicationController
   def index
     @posts = Post.all
     @user_posts = current_user.posts
+    puts @posts[4].user.email
   end
 
   # GET /posts/1

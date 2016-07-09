@@ -1,4 +1,21 @@
-h1 Listing posts
+h1  Top Page
+
+
+- @posts.each do |post|
+  .c-card
+    - if post.user.present?
+      .c-card_user = post.user.email
+    .c-card_title
+      = link_to post
+        = post.title
+    .c-card_content = post.content
+    .clearfix
+      = link_to '削除', post, class: 'c-card_delete c-btn btn-ghost pull-right' ,data: { confirm: 'Are you sure?' }, method: :delete
+      = link_to edit_post_path(post), class: 'c-card_edit c-btn btn-ghost pull-right'
+        i.fa.fa-pencil
+        | 編集
+
+
 
 table
   thead
